@@ -1,0 +1,28 @@
+backend:
+  name: github
+  repo: arhill05/wedding-site
+
+media_folder: src/images
+public_folder: images
+
+media_library:
+  name: cloudinary
+  config:
+    cloud_name: df3ikytgy
+    api_key: 442271224513784
+
+collections:
+  - name: photos
+    label: Photos
+    folder: photos
+    create: true
+    fields:
+      - { name: path, label: Path }
+      - { name: date, label: Date, widget: date }
+      - { name: title, label: Title }
+      - label: "Featured Image"
+        name: "thumbnail"
+        widget: "image"
+        media_library:
+          config:
+            multiple: false
