@@ -1,7 +1,8 @@
 @font-face {
   font-family: 'Jenna Sue';
   src: url('../fonts/JennaSue.woff2') format('woff2'),
-    url('../fonts/JennaSue.woff') format('woff');
+    url('../fonts/JennaSue.woff') format('woff'),
+    url('../fonts/JennaSue.ttf')  format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -13,7 +14,7 @@ html {
 }
 body {
   margin: 0;
-  background-color: #F7E8FF;
+  background-color: #f7e8ff;
 }
 article,
 aside,

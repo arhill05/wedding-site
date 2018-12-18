@@ -3,6 +3,7 @@ import { Link } from 'gatsby'
 
 import SEO from '../components/seo'
 import Countdown from '../components/countdown'
+import '../css/global.css'
 import './index.css'
 
 const primaryColor = '#600093'
