@@ -5,11 +5,11 @@ backend:
 media_folder: src/images
 public_folder: images
 
-media_library:
-  name: cloudinary
-  config:
-    cloud_name: df3ikytgy
-    api_key: 442271224513784
+# media_library:
+#   name: cloudinary
+#   config:
+#     cloud_name: df3ikytgy
+#     api_key: 442271224513784
 
 collections:
   - name: photos
@@ -17,7 +17,7 @@ collections:
     folder: photos
     create: true
     fields:
-      - { name: path, label: Path }
+      - { name: path, widget: hidden, default: 'photos' }
       - { name: date, label: Date, widget: date }
       - { name: title, label: Title }
       - label: "Featured Image"

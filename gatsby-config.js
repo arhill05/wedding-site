@@ -11,18 +11,13 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
+        name: `photos`,
         path: `${__dirname}/src/images`,
       },
     },
-    'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
-    {
-      resolve: "gatsby-transformer-remark",
-      options: {
-        plugins: [],
-      },
-    },
+    'gatsby-transformer-sharp',
+    'gatsby-transformer-remark',
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -32,7 +27,7 @@ module.exports = {
         background_color: '#f7e8ff',
         theme_color: '#600093',
         display: 'minimal-ui',
-        // icon: '', // This path is relative to the root of the site.
+        icon: 'src/images/IMG_1397.jpg', // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

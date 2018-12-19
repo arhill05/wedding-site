@@ -106,7 +106,6 @@ section.hero {
 
 .hero__links {
   display: flex;
-  display: none; /* remove to display links */
   flex-direction: column;
   align-items: center;
   margin-top: 72px;
