@@ -27,7 +27,7 @@ class Countdown extends Component {
     this.setState({ days, hours, minutes, seconds })
   }
 
-  componentWillMount() {
+  componentDidMount() {
     this.calcTime()
     setInterval(this.calcTime, 1000)
   }
