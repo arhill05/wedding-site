@@ -17,7 +17,7 @@ const IndexPage = () => {
             <h1>Julie and Drew</h1>
             <p className="hero__subtext--gray">are getting married in</p>
             <Countdown />
-            <p className="hero__date">Saturday, June 30th, 2019</p>
+            <p className="hero__date">Sunday, June 30th, 2019</p>
             <div className="hero__links">
               {/* <Link to="/">Our Story</Link> */}
               {/* <Link to="/wedding-party">The Wedding Party</Link> */}
