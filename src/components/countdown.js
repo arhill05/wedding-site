@@ -29,7 +29,11 @@ class Countdown extends Component {
 
   componentDidMount() {
     this.calcTime()
-    setInterval(this.calcTime, 1000)
+    this.interval = setInterval(this.calcTime, 1000)
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.interval);
   }
 
   isPlural = (number) => {

@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Layout from '../components/layout'
 import Img from 'gatsby-image'
 import { graphql } from 'gatsby'
+import './photos.css'
 
 class PhotosPage extends Component {
   constructor(props) {
@@ -18,12 +19,13 @@ class PhotosPage extends Component {
       return (
         <div
           key={index}
-          style={{
-            minHeight: '300px',
-            width: 'auto',
-            flexBasis: '32%',
-            cursor: 'pointer'
-          }}
+          className="photos__image-wrapper"
+          // style={{
+          //   minHeight: '300px',
+          //   width: 'auto',
+          //   flexBasis: '32%',
+          //   cursor: 'pointer'
+          // }}
           onClick={() => this.onImageClick(x.original.src)}
         >
           <Img fluid={x.fluid} />
@@ -52,20 +54,13 @@ class PhotosPage extends Component {
         {
           this.state.showOverlay
             ?
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'absolute', top: '0', left: '0', right: '0', bottom: '0', backgroundColor: 'rgba(178, 178, 178, 0.8', zIndex: '1000' }} onClick={this.onOverlayClick}>
-              <img alt="enlarged" style={{ maxWidth: '80%', maxHeight: '80%', boxShadow: '0 2px 30px 12px rgba(0,0,0,0.4)' }} src={this.state.overlayImageSrc}></img>
+            <div className="overlay" onClick={this.onOverlayClick}>
+              <img alt="enlarged" className="overlay__image" src={this.state.overlayImageSrc}></img>
             </div>
             : null
         }
         <Layout>
-          <div
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'space-around',
-              flexWrap: 'wrap',
-            }}
-          >
+          <div className="photos__images-container">
             {this.state.imgTags}
           </div>
         </Layout></>
