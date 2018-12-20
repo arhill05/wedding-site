@@ -14,10 +14,14 @@ h2,
 h3,
 h4,
 a,
-span,
-p {
+.hero span,
+.hero p {
   font-family: 'Jenna Sue', serif;
   color: #600093;
+}
+
+.hero h1, .hero h2, .hero h3 {
+  margin: 0;
 }
 
 body {
@@ -82,18 +86,20 @@ section.hero {
   font-size: 144px;
 }
 
-.hero__subtext--gray {
+p.hero__subtext--gray {
+  margin: 0;
   font-size: 72px;
   color: #b2b2b2;
 }
 
 .hero__date {
   font-size: 64px;
-  margin-top: 32px;
+  margin-top: 0;
 }
 
 .countdown {
-  margin-top: 64px;
+  text-align: center;
+  margin-top: 32px;
 }
 
 .countdown__emphasis {
@@ -111,7 +117,7 @@ section.hero {
   margin-top: 72px;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1100px) {
   @font-face {
     font-family: 'Jenna Sue';
     src: url('../fonts/JennaSue.ttf') format('truetype'),

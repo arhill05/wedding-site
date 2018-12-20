@@ -11,7 +11,6 @@ class PhotosPage extends Component {
     const imageFixeds = props.data.allFile.edges.map(x => {
       return {
         fluid: x.node.childImageSharp.fluid,
-        original: x.node.childImageSharp.original,
       }
     })
 
@@ -26,7 +25,7 @@ class PhotosPage extends Component {
           //   flexBasis: '32%',
           //   cursor: 'pointer'
           // }}
-          onClick={() => this.onImageClick(x.original.src)}
+          onClick={() => this.onImageClick(x.fluid.srcSet)}
         >
           <Img fluid={x.fluid} />
         </div>
@@ -36,34 +35,34 @@ class PhotosPage extends Component {
     this.state = {
       imgTags,
       showOverlay: false,
-      overlayImageSrc: ''
+      overlayImageSrc: '',
     }
   }
 
-  onImageClick = (imageSrc) => {
-    this.setState({ showOverlay: true, overlayImageSrc: imageSrc });
+  onImageClick = imageSrc => {
+    this.setState({ showOverlay: true, overlayImageSrc: imageSrc })
   }
 
-  onOverlayClick = (e) => {
+  onOverlayClick = e => {
     this.setState({ showOverlay: false })
   }
 
   render() {
     return (
       <>
-        {
-          this.state.showOverlay
-            ?
-            <div className="overlay" onClick={this.onOverlayClick}>
-              <img alt="enlarged" className="overlay__image" src={this.state.overlayImageSrc}></img>
-            </div>
-            : null
-        }
-        <Layout>
-          <div className="photos__images-container">
-            {this.state.imgTags}
+        {this.state.showOverlay ? (
+          <div className="overlay" onClick={this.onOverlayClick}>
+            <img
+              alt="enlarged"
+              className="overlay__image"
+              srcSet={this.state.overlayImageSrc}
+            />
           </div>
-        </Layout></>
+        ) : null}
+        <Layout>
+          <div className="photos__images-container">{this.state.imgTags}</div>
+        </Layout>
+      </>
     )
   }
 }
@@ -76,11 +75,8 @@ export const pageQuery = graphql`
       edges {
         node {
           childImageSharp {
-            fluid(maxWidth: 550, maxHeight: 550) {
+            fluid(maxHeight: 500) {
               ...GatsbyImageSharpFluid
-            }
-            original {
-              src
             }
           }
         }

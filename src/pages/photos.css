@@ -1,44 +1,50 @@
 .photos__image-wrapper {
-    margin: 16px 0;
-    min-height: 300px;
-    width: auto;
-    flex-basis: 32%;
-    cursor: pointer;
-    box-shadow: 0 2px 6px 2px rgba(0, 0, 0, 0.2);
+  margin: 16px 0;
+  max-height: 500px;
+  height: fit-content;
+  width: auto;
+  cursor: pointer;
+  box-shadow: 0 2px 6px 2px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  flex-basis: 24%;
+}
+
+.photos__image-wrapper .gatsby-image-wrapper {
+  max-height: 100%;
 }
 
 .overlay {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(178, 178, 178, 0.8);
-    z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(178, 178, 178, 0.8);
+  z-index: 1000;
 }
 
 .overlay__image {
-    max-width: 80%;
-    max-height: 80%;
-    box-shadow: 0 2px 30px 12px rgba(0, 0, 0, 0.4);
+  max-width: 90%;
+  max-height: 90%;
+  box-shadow: 0 2px 30px 12px rgba(0, 0, 0, 0.4);
 }
 
 .photos__images-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-wrap: wrap;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
 @media screen and (max-width: 900px) {
-    .photos__image-wrapper {
-        flex-basis: 100%;
-    }
-    .overlay__image {
-        max-height: 95%;
-        max-width: 90%;
-    }
+  .photos__image-wrapper {
+    flex-basis: 100%;
+  }
+  .overlay__image {
+    max-height: 95%;
+    max-width: 90%;
+  }
 }
