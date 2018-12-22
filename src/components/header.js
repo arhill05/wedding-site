@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import React from 'react'
 
 const Header = ({ siteTitle }) => (
-  <div
+  <header
     style={{
       marginBottom: '1.45rem',
     }}
@@ -15,11 +15,13 @@ const Header = ({ siteTitle }) => (
         padding: '1.45rem 1.0875rem',
       }}
     >
-      <Link to="/" style={{}}>
+      <Link activeClassName="link--active" to="/">
         Home
       </Link>
+      <Link activeClassName="link--active" to="/our-story">Our Story</Link>
+      <Link activeClassName="link--active" to="/photos">Photos</Link>
     </div>
-  </div>
+  </header>
 )
 
 Header.propTypes = {

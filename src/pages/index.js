@@ -19,7 +19,7 @@ const IndexPage = () => {
             <Countdown />
             <p className="hero__date">Sunday, June 30th, 2019</p>
             <div className="hero__links">
-              {/* <Link to="/">Our Story</Link> */}
+              <Link to="/our-story">Our Story</Link>
               {/* <Link to="/wedding-party">The Wedding Party</Link> */}
               <Link to="/photos">Photos</Link>
               {/* <a>Registry</a> */}
