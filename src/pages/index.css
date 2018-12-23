@@ -171,8 +171,4 @@ p.hero__subtext--gray {
   .hero__subtext--gray {
     font-size: 36px;
   }
-
-  .hero__links {
-    display: none;
-  }
 }

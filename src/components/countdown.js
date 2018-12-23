@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-const weddingDate = new Date('06-30-2019').getTime()
+const weddingDate = new Date('2019-06-30T00:00:00+05:00').getTime();
 
 class Countdown extends Component {
   constructor(props) {
