@@ -1,0 +1,8 @@
+.success {
+    margin: 0 auto;
+    max-width: 900px;
+}
+
+.success h1 {
+    font-size: 64px;
+}
