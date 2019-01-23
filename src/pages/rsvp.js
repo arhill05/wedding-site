@@ -21,6 +21,7 @@ class RsvpPage extends Component {
           >
             <h2>RSVP</h2>
             <input type="hidden" name="bot-field" />
+            <input type="hidden" name="form-name" value="rsvp"/>
             <div className="form-group">
               <label htmlFor="name">Name</label>
               <input type="text" name="name" id="name" />
