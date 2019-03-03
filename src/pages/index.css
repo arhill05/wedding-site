@@ -60,6 +60,7 @@ section.hero {
 .hero__gradient-container {
   display: flex;
   align-items: center;
+  height: 100%;
   width: 100%;
   background: linear-gradient(
     to right,
