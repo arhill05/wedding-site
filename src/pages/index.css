@@ -137,6 +137,7 @@ p.hero__subtext--gray {
     background: transparent;
     justify-content: center;
     padding: 0;
+    height: unset;
   }
 
   .hero__content-container {
