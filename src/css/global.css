@@ -1,42 +1,54 @@
 @font-face {
-    font-family: 'Jenna Sue';
-    src: url('../fonts/JennaSue.woff2') format('woff2'), url('../fonts/JennaSue.woff') format('woff'), url('../fonts/JennaSue.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'Jenna Sue';
+  src: url('../fonts/JennaSue.woff2') format('woff2'),
+    url('../fonts/JennaSue.woff') format('woff'),
+    url('../fonts/JennaSue.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
 html {
-    font-family: sans-serif;
-    -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
-    margin: 0;
-    background: linear-gradient(to bottom right, #f7e8ff 55%, #600093);
-    min-height: 100vh;
-    font-family: 'Roboto', sans-serif;
-    color: #000333
+  margin: 0;
+  background: linear-gradient(to bottom right, #f7e8ff 55%, #600093);
+  min-height: 100vh;
+  font-family: 'Roboto', sans-serif;
+  color: #000333;
 }
 
 header a {
-    font-size: 36px;
-    margin: 0 16px;
+  font-size: 36px;
+  margin: 0 16px;
 }
 
 .link--active {
-    color: #cf76ff;
-    border-bottom: 3px solid #cf76ff;
-    font-weight: bold;
+  color: #cf76ff;
+  border-bottom: 3px solid #cf76ff;
+  font-weight: bold;
 }
 
 h1,
 h2,
 h3,
 h4,
-a
-{
-    font-family: 'Jenna Sue', sans-serif;
-    color: #600093;
+a {
+  font-family: 'Jenna Sue', sans-serif;
+  color: #600093;
+}
+
+@media screen and (max-width: 1100px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+  }
+  header a {
+    font-size: 36px;
+    margin: unset;
+  }
 }
