@@ -42,9 +42,9 @@ class RegistryPage extends Component {
               If you would prefer a more traditional registry, we are also
               registered at the following locations:
               <div className="registry__other-registries__links">
-                <a href="#">Best Buy</a>
-                <a href="#">Amazon</a>
-                <a href="#">Target</a>
+                <a href="https://www.bestbuy.com/profile/list/viewlist?listId=r0hJEDXrhf8m56NRe53%252BhinanL6XZQ5y5SWGIFQmFaB1Z0XX2l%252FuQmGtvlm0GsFtpSewMDWJgqJJeIvj%252FFNJONFUaGfQZ2CiIXWdw1a3RGUtPoKafXi%252BOPLp2mIdMjiUBM8GlfgbmMw0PIfvufRSlYqnj3vZ1GKT%252FlD6Vsg95nRPxDpJ0qwjqVI2yMcm0UfBQAyr3adVnd1j91%252FTzfsE%252FVVx%252BMRxRmJhRHzBYJbApoysuSwLmX%252Ff8AJWg0cIXP2cQCoTJ8HcFoW2gS3%252FBGrgbCFdW6ex4%252F8L2J0HQGU98xLxo%252BWAsihfo4dg%252F0lhuWBz9JuQfkuz7whJm9dWupinbfCrsVDDAZN3UEszoNOdC4s%253D">Best Buy</a>
+                <a href="https://www.amazon.com/wedding/share/JulieAndDrew">Amazon</a>
+                <a href="http://tgt.gifts/JulieAndDrewSayIDo">Target</a>
               </div>
             </p>
           </div>
