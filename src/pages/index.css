@@ -1,14 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Pacifico');
-
-@font-face {
-  font-family: 'Jenna Sue';
-  src: url('../fonts/JennaSue.ttf') format('truetype'),
-    url('../fonts/JennaSue.woff2') format('woff2'),
-    url('../fonts/JennaSue.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
 .hero span,
 .hero p {
   font-family: 'Jenna Sue', serif;
