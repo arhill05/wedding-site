@@ -34,12 +34,6 @@ h2 {
   border-bottom: 2px solid #600093;
 }
 
-a:hover {
-  cursor: pointer;
-  color: #cf76ff;
-  border-bottom: 2px solid #cf76ff;
-}
-
 section.hero {
   min-height: fit-content;
   height: 100vh;
