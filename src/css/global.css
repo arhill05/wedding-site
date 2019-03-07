@@ -42,8 +42,11 @@ a {
   color: #600093;
 }
 
-.registry__honeyfund-link {
-  font-size: 64px;
+a {
+  font-size: 36px;
+  border-bottom: 1px solid #600093;
+  width: fit-content;
+  text-decoration: none;
 }
 
 @media screen and (max-width: 1100px) {

@@ -14,13 +14,13 @@ const Header = ({ siteTitle }) => (
     <Link activeClassName="link--active" to="/">
       Home
     </Link>
-    <Link activeClassName="link--active" to="/our-story">
+    <Link activeClassName="link--active" to="/our-story/">
       Our Story
     </Link>
-    <Link activeClassName="link--active" to="/photos">
+    <Link activeClassName="link--active" to="/photos/">
       Photos
     </Link>
-    <Link activeClassName="link--active" to="/registry">
+    <Link activeClassName="link--active" to="/registry/">
       Registry
     </Link>
   </header>
