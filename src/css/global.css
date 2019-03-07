@@ -42,6 +42,10 @@ a {
   color: #600093;
 }
 
+.registry__honeyfund-link {
+  font-size: 64px;
+}
+
 @media screen and (max-width: 1100px) {
   header {
     display: flex;
