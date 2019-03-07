@@ -69,25 +69,22 @@ section.hero {
   flex-direction: column;
   align-items: center;
   width: 52%;
-  height: 100vh;
   min-height: fit-content;
+  padding: 16px 0;
 }
 
 .hero h1 {
-  /* font-size: 136px; */
-  font-size: 8vmax;
+  font-size: 136px;
 }
 
 p.hero__subtext--gray {
   margin: 0;
-  /* font-size: 72px; */
-  font-size: 4.5vmax;
+  font-size: 72px;
   color: #b2b2b2;
 }
 
 .hero__date {
-  /* font-size: 64px; */
-  font-size: 4.25vmax;
+  font-size: 64px;
   margin-top: 0;
 }
 
@@ -98,13 +95,11 @@ p.hero__subtext--gray {
 }
 
 .countdown__emphasis {
-  /* font-size: 96px; */
-  font-size: 5vmax;
+  font-size: 96px;
 }
 
 .countdown__normal {
-  /* font-size: 72px; */
-  font-size: 4.5vmax;
+  font-size: 72px;
 }
 
 .hero__links {
@@ -128,6 +123,7 @@ p.hero__subtext--gray {
     background-image: url('https://res.cloudinary.com/df3ikytgy/image/upload/e_grayscale,q_auto:good/e_brightness:-50/v1545094468/wedding-site/main-bg.png');
     background-size: cover;
     background-position: right;
+    display: flex;
   }
 
   .hero h1 {
@@ -152,13 +148,6 @@ p.hero__subtext--gray {
     margin-top: 32px;
   }
 
-  .countdown__emphasis {
-    font-size: 64px;
-  }
-
-  .countdown__normal {
-    font-size: 36px;
-  }
 
   .hero h1,
   .hero h2,
@@ -173,7 +162,24 @@ p.hero__subtext--gray {
     line-height: 1;
   }
 
-  .hero__subtext--gray {
-    font-size: 36px;
+  .countdown__emphasis {
+    font-size: 5vmax;
   }
+
+  .countdown__normal {
+    font-size: 4.5vmax;
+  }
+
+  .hero h1 {
+    font-size: 8vmax;
+  }
+
+  p.hero__subtext--gray {
+    font-size: 4.5vmax;
+  }
+
+  .hero__date {
+    font-size: 4.25vmax;
+  }
+
 }
