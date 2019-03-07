@@ -9,6 +9,10 @@
   font-style: normal;
 }
 
+.registry__honeyfund-link {
+  font-size: 64px;
+}
+
 .hero span,
 .hero p {
   font-family: 'Jenna Sue', serif;
