@@ -23,6 +23,9 @@ const Header = ({ siteTitle }) => (
     <Link activeClassName="link--active" to="/registry/">
       Registry
     </Link>
+    <Link activeClassName="link--active" to="/rsvp/">
+      RSVP
+    </Link>
   </header>
 )
 
