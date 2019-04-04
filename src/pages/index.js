@@ -23,7 +23,7 @@ const IndexPage = () => {
               {/* <Link to="/wedding-party">The Wedding Party</Link> */}
               <Link to="/photos">Photos</Link>
               <Link to="/registry">Registry</Link>
-              {/* <Link to="/rsvp">RSVP</Link> */}
+              <Link to="/rsvp">RSVP</Link>
             </div>
           </div>
         </div>
