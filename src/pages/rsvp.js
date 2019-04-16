@@ -20,6 +20,7 @@ class RsvpPage extends Component {
             action="/success"
           >
             <h2>RSVP</h2>
+            <h3 className="rsvp-by-date">by June 7th</h3>
             <input type="hidden" name="bot-field" />
             <input type="hidden" name="form-name" value="rsvp"/>
             <div className="form-group">
