@@ -41,7 +41,7 @@ class RsvpPage extends Component {
               <label htmlFor="guest-count">
                 How many will be attending (including yourself)?
               </label>
-              <input type="number" name="guest-count" id="guest-count" />
+              <input type="number" min="0" max="10" name="guest-count" id="guest-count" />
             </div>
             <div className="form-actions">
               <button type="submit">Submit</button>
