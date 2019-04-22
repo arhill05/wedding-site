@@ -9,7 +9,7 @@ const SuccessPage = () => (
       <p>Thanks for submitting your RSVP.</p>
       <p>
         We look forward to sharing our special day with you on{' '}
-        <strong>June 30th, 2019</strong> at <strong>2pm EST</strong> at the{' '}
+        <strong>June 30th, 2019</strong> at <strong>3:30pm EST</strong> at the{' '}
         <strong>Olmsted in Louisville</strong>.
       </p>
     </section>
