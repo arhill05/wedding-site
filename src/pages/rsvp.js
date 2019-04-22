@@ -25,16 +25,16 @@ class RsvpPage extends Component {
             <input type="hidden" name="form-name" value="rsvp"/>
             <div className="form-group">
               <label htmlFor="name">Name</label>
-              <input type="text" name="name" id="name" />
+              <input type="text" name="name" required id="name" />
             </div>
             <div className="form-group">
               <label htmlFor="is-coming">Are you attending?</label>
               <p>
-                <input type="radio" name="is-coming" value="yes" />
+                <input type="radio" name="is-coming" required value="yes" />
                 Wouldn't miss it!
               </p>
               <p>
-                <input type="radio" name="is-coming" value="no" />
+                <input type="radio" name="is-coming" required value="no" />
                 We'll be celebrating from afar.
               </p>
             </div>
@@ -42,7 +42,7 @@ class RsvpPage extends Component {
               <label htmlFor="guest-count">
                 How many will be attending (including yourself)?
               </label>
-              <input type="number" min="0" max="10" name="guest-count" id="guest-count" />
+              <input type="number" min="0" max="10" name="guest-count" required id="guest-count" />
             </div>
             <div className="form-actions">
               <button type="submit">Submit</button>
