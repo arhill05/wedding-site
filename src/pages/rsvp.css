@@ -1,89 +1,98 @@
 .rsvp {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .rsvp form {
-    max-width: 900px;
-    background-color: #fbfbfb;
-    box-shadow: 0 2px 6px 2px rgba(0, 0, 0, 0.2);
-    border-radius: 6px;
-    padding: 64px;
+  max-width: 500px;
+  background-color: #fbfbfb;
+  box-shadow: 0 2px 6px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  padding: 64px;
 }
 
 .rsvp form h2 {
-    margin: 0;
-    font-size: 48px;
-    text-align: center;
+  margin: 0;
+  font-size: 48px;
+  text-align: center;
 }
 
 .rsvp form h3 {
-    font-size: 36px;
-    text-align: center;
+  font-size: 36px;
+  text-align: center;
 }
 
 .rsvp .form-group {
-    margin: 32px 0;
+  margin: 32px 0;
 }
 
 .rsvp .form-group label {
-    display: block;
-    margin: 4px 0;
-    font-weight: bold;
+  display: block;
+  margin: 4px 0;
+  font-weight: bold;
 }
 
-.rsvp .form-group input[type="text"],
-.rsvp .form-group input[type="number"] {
-    font-size: 16px;
-    padding: 2px;
-    background: none;
-    border: none;
-    border-bottom: 2px solid #cfcfcf;
-    transition: all 0.2s linear;
+.rsvp .form-group input[type='text'],
+.rsvp .form-group input[type='number'] {
+  font-size: 16px;
+  padding: 2px;
+  background: none;
+  border: none;
+  border-bottom: 2px solid #cfcfcf;
+  transition: all 0.2s linear;
 }
 
-.rsvp .form-group input[type="text"]:focus,
-.rsvp .form-group input[type="number"]:focus {
-    border-bottom: 2px solid #600093;
-    transition: all 0.2s linear;
+.rsvp .form-group input[type='text']:focus,
+.rsvp .form-group input[type='number']:focus {
+  border-bottom: 2px solid #600093;
+  transition: all 0.2s linear;
 }
 
 .rsvp .form-group .subtext {
-    color: #cfcfcf;
+  color: #cfcfcf;
 }
 
 .rsvp .form-actions {
-    display: flex;
-    justify-content: flex-end;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .rsvp .form-actions button {
-    background-color: #600093;
-    border-radius: 4px;
-    border: none;
-    color: #f7e8ff;
-    font-size: 16px;
-    padding: 8px 12px;
-    margin-left: 16px;
-    transition: all 0.2s ease;
+  background-color: #600093;
+  border-radius: 4px;
+  border: none;
+  color: #f7e8ff;
+  font-size: 16px;
+  padding: 8px 12px;
+  margin-left: 16px;
+  transition: all 0.2s ease;
 }
 
 .rsvp .form-actions button:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .rsvp .form-actions button:active {
-    background-color: #46006b;
-    transition: all 0.2s ease;
+  background-color: #46006b;
+  transition: all 0.2s ease;
 }
 
 .rsvp-by-date {
-    margin-top: 0px;
+  margin-top: 0px;
+}
+
+a.inline-link {
+  font-family: unset;
+  font-size: unset;
+}
+
+.hotel-info {
+    font-size: 14px;
 }
 
 @media screen and (max-width: 1100px) {
-    .rsvp form {
-        padding: 32px;
-    }
+  .rsvp form {
+    padding: 32px;
+  }
 }

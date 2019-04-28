@@ -22,7 +22,7 @@ class RsvpPage extends Component {
             <h2>RSVP</h2>
             <h3 className="rsvp-by-date">by June 7th</h3>
             <input type="hidden" name="bot-field" />
-            <input type="hidden" name="form-name" value="rsvp"/>
+            <input type="hidden" name="form-name" value="rsvp" />
             <div className="form-group">
               <label htmlFor="name">Name</label>
               <input type="text" name="name" required id="name" />
@@ -42,7 +42,25 @@ class RsvpPage extends Component {
               <label htmlFor="guest-count">
                 How many will be attending (including yourself)?
               </label>
-              <input type="number" min="0" max="10" name="guest-count" required id="guest-count" />
+              <input
+                type="number"
+                min="0"
+                max="10"
+                name="guest-count"
+                required
+                id="guest-count"
+              />
+            </div>
+            <div className="form-group hotel-info">
+              <em>
+                If you would like to stay overnight, we have reserved a block at
+                a hotel nearby. Please{' '}
+                <a class="inline-link" href="http://hiltongardeninn.hilton.com/en/gi/groups/personalized/S/SDFSMGI-RHW-20190629/index.jhtml">
+                  click here
+                </a>{' '}
+                to make a reservation and get some perks -- including a discount
+                and free breakfast!
+              </em>
             </div>
             <div className="form-actions">
               <button type="submit">Submit</button>
