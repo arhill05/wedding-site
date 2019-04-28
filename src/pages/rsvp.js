@@ -52,7 +52,7 @@ class RsvpPage extends Component {
               />
             </div>
             <div className="form-group hotel-info">
-              <em>
+            <label htmlFor="hotel-info">Hotel Information</label>
                 If you would like to stay overnight, we have reserved a block at
                 a hotel nearby. Please{' '}
                 <a class="inline-link" href="http://hiltongardeninn.hilton.com/en/gi/groups/personalized/S/SDFSMGI-RHW-20190629/index.jhtml">
@@ -60,7 +60,6 @@ class RsvpPage extends Component {
                 </a>{' '}
                 to make a reservation and get some perks -- including a discount
                 and free breakfast!
-              </em>
             </div>
             <div className="form-actions">
               <button type="submit">Submit</button>

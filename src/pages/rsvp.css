@@ -87,10 +87,6 @@ a.inline-link {
   font-size: unset;
 }
 
-.hotel-info {
-    font-size: 14px;
-}
-
 @media screen and (max-width: 1100px) {
   .rsvp form {
     padding: 32px;
