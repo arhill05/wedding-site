@@ -8,6 +8,16 @@ class RsvpPage extends Component {
     super(props)
   }
 
+  toggleNumberRequired() {
+    const isComing = document.querySelector('#is-coming-yes').checked
+    const guestCountElement = document.querySelector('#guest-count')
+    if (isComing && !guestCountElement.hasAttribute('required')) {
+      guestCountElement.setAttribute('required', 'true')
+    } else if (!isComing && guestCountElement.hasAttribute('required')) {
+      guestCountElement.removeAttribute('required')
+    }
+  }
+
   render() {
     return (
       <Layout>
@@ -30,11 +40,25 @@ class RsvpPage extends Component {
             <div className="form-group">
               <label htmlFor="is-coming">Are you attending?</label>
               <p>
-                <input type="radio" name="is-coming" required value="yes" />
+                <input
+                  type="radio"
+                  name="is-coming"
+                  onChange={this.toggleNumberRequired}
+                  required
+                  value="yes"
+                  id="is-coming-yes"
+                />
                 Wouldn't miss it!
               </p>
               <p>
-                <input type="radio" name="is-coming" required value="no" />
+                <input
+                  type="radio"
+                  name="is-coming"
+                  onChange={this.toggleNumberRequired}
+                  required
+                  value="no"
+                  id="is-coming-no"
+                />
                 We'll be celebrating from afar.
               </p>
             </div>
@@ -52,14 +76,17 @@ class RsvpPage extends Component {
               />
             </div>
             <div className="form-group hotel-info">
-            <label htmlFor="hotel-info">Hotel Information</label>
-                If you would like to stay overnight, we have reserved a block at
-                a hotel nearby. Please{' '}
-                <a class="inline-link" href="http://hiltongardeninn.hilton.com/en/gi/groups/personalized/S/SDFSMGI-RHW-20190629/index.jhtml">
-                  click here
-                </a>{' '}
-                to make a reservation and get some perks -- including a discount
-                and free breakfast!
+              <label htmlFor="hotel-info">Hotel Information</label>
+              If you would like to stay overnight, we have reserved a block at a
+              hotel nearby. Please{' '}
+              <a
+                className="inline-link"
+                href="http://hiltongardeninn.hilton.com/en/gi/groups/personalized/S/SDFSMGI-RHW-20190629/index.jhtml"
+              >
+                click here
+              </a>{' '}
+              to make a reservation and get some perks -- including a discount
+              and free breakfast!
             </div>
             <div className="form-actions">
               <button type="submit">Submit</button>
