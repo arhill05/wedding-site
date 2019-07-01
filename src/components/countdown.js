@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-const weddingDate = new Date('2019-06-30T15:30:00-04:00').getTime();
+const weddingDate = new Date('2019-06-30T15:30:00-04:00').getTime()
 
 class Countdown extends Component {
   constructor(props) {
@@ -17,12 +17,14 @@ class Countdown extends Component {
     const now = new Date().getTime()
 
     const distance = weddingDate - now
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24))
-    const hours = Math.floor(
-      (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+    const days = Math.abs(Math.floor(distance / (1000 * 60 * 60 * 24)))
+    const hours = Math.abs(
+      Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
     )
-    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))
-    const seconds = Math.floor((distance % (1000 * 60)) / 1000)
+    const minutes = Math.abs(
+      Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))
+    )
+    const seconds = Math.abs(Math.floor((distance % (1000 * 60)) / 1000))
 
     this.setState({ days, hours, minutes, seconds })
   }
@@ -33,24 +35,36 @@ class Countdown extends Component {
   }
 
   componentWillUnmount() {
-    clearInterval(this.interval);
+    clearInterval(this.interval)
   }
 
-  isPlural = (number) => {
-    return number !== 1;
+  isPlural = number => {
+    return number !== 1
   }
 
   render() {
     return (
       <p className="countdown">
         <span className="countdown__emphasis">{this.state.days}</span>
-        <span className="countdown__normal"> {`${this.isPlural(this.state.days) ? 'days' : 'day'}`}, </span>
+        <span className="countdown__normal">
+          {' '}
+          {`${this.isPlural(this.state.days) ? 'days' : 'day'}`},{' '}
+        </span>
         <span className="countdown__emphasis">{this.state.hours}</span>
-        <span className="countdown__normal"> {`${this.isPlural(this.state.hours) ? 'hours' : 'hour'}`}, </span>
+        <span className="countdown__normal">
+          {' '}
+          {`${this.isPlural(this.state.hours) ? 'hours' : 'hour'}`},{' '}
+        </span>
         <span className="countdown__emphasis">{this.state.minutes}</span>
-        <span className="countdown__normal"> {`${this.isPlural(this.state.minutes) ? 'minutes' : 'minute'}`}, and </span>
+        <span className="countdown__normal">
+          {' '}
+          {`${this.isPlural(this.state.minutes) ? 'minutes' : 'minute'}`}, and{' '}
+        </span>
         <span className="countdown__emphasis">{this.state.seconds}</span>
-        <span className="countdown__normal"> {`${this.isPlural(this.state.seconds) ? 'seconds' : 'second'}`} </span>
+        <span className="countdown__normal">
+          {' '}
+          {`${this.isPlural(this.state.seconds) ? 'seconds' : 'second'}`}{' '}
+        </span>
       </p>
     )
   }

@@ -15,15 +15,12 @@ const IndexPage = () => {
         <div className="hero__gradient-container">
           <div className="hero__content-container">
             <h1>Julie and Drew</h1>
-            <p className="hero__subtext--gray">are getting married in</p>
+            <p className="hero__subtext--gray">have been married for</p>
             <Countdown />
-            <p className="hero__date">Sunday, June 30th, 2019</p>
             <div className="hero__links">
               <Link to="/our-story">Our Story</Link>
               {/* <Link to="/wedding-party">The Wedding Party</Link> */}
               <Link to="/photos">Photos</Link>
-              <Link to="/registry">Registry</Link>
-              <Link to="/rsvp">RSVP</Link>
             </div>
           </div>
         </div>
