@@ -2,27 +2,20 @@ backend:
   name: github
   repo: arhill05/wedding-site
 
+# backend:
+#     name: test-repo
+
 media_folder: src/images
 public_folder: images
 
-# media_library:
-#   name: cloudinary
-#   config:
-#     cloud_name: df3ikytgy
-#     api_key: 442271224513784
-
 collections:
-  - name: photos
-    label: Photos
-    folder: photos
+  - name: "Christmas List"
+    label: "Christmas List Item"
+    folder: "content/christmas-list"
     create: true
+    identifier_field: 'name'
     fields:
-      - { name: path, widget: hidden, default: 'photos' }
-      - { name: date, label: Date, widget: date }
-      - { name: title, label: Title }
-      - label: "Featured Image"
-        name: "thumbnail"
-        widget: "image"
-        media_library:
-          config:
-            multiple: false
+      - { name: "name", label: "Name" }
+      - { name: "price", label: "Price", widget: "number" }
+      - { name: "link", label: "Link" }
+      - { name: "person", widget: "select", options: ["Drew", "Julie"] }
