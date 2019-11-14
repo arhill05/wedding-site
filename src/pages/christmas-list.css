@@ -1,0 +1,108 @@
+:root {
+  --pink: #d69e9c;
+  --white: #fff;
+  --tan: #e8d8b4;
+  --yellow: #efcf8d;
+  --brown: #b7a598;
+}
+
+.christmas-list-page {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--tan);
+  display: flex;
+  justify-content: center;
+  font-size: 16px;
+  padding: 32px;
+  overflow-y: scroll;
+}
+
+.christmas-list-page a {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+}
+
+.christmas-lists {
+  max-width: 900px;
+  z-index: 200;
+  position: relative;
+  background-color: var(--white);
+  height: fit-content;
+  padding: 32px 64px;
+  box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.12);
+}
+
+.christmas-lists h1 {
+  text-align: center;
+}
+
+.christmas-lists h2 {
+  margin: 8px 0;
+}
+
+.christmas-list-page h1,
+.christmas-list-page h2,
+.christmas-list-page h3,
+.christmas-list-page h4 {
+  color: var(--pink);
+}
+
+.list-item {
+  margin: 24px 0;
+}
+
+.list-item * {
+  margin: 4px 0;
+}
+
+.list-item__title {
+  font-weight: bold;
+  color: var(--brown);
+}
+
+.christmas-list-page h1 {
+  font-size: 4em;
+}
+
+.christmas-list-page h2 {
+  font-size: 3em;
+}
+
+.christmas-list-image {
+  position: fixed;
+  width: 15vw;
+  top: 5vh;
+  right: 5vw;
+  transform: rotate(30deg);
+  z-index: 100;
+}
+
+.lists-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 128px;
+}
+
+@media screen and (max-width: 768px) {
+  .christmas-list-page {
+    padding: 16px;
+  }
+
+  .christmas-lists {
+    max-width: unset;
+    padding: 8px 24px;
+  }
+
+  .lists-container {
+    grid-template-columns: 1fr;
+  }
+
+  .christmas-list-image {
+    top: -2vh;
+    right: -5vw;
+    width: 30vw;
+  }
+}

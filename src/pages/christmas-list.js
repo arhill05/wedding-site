@@ -1,36 +1,48 @@
 import React, { Component } from 'react'
 import { graphql } from 'gatsby'
+import './christmas-list.css'
 const ChristmasList = props => {
-  console.log(props)
-  // const { markdownRemark } = data;
-  // const { frontmatter } = markdownRemark;
+  const christmasImageSrc = props.data.christmasImage.publicURL
   const items = props.data.allMarkdownRemark.edges.map(
     edge => edge.node.frontmatter
   )
   const juliesItems = items.filter(x => x.person.toLowerCase() === 'julie')
   const drewsItems = items.filter(x => x.person.toLowerCase() === 'drew')
 
-  const juliesListHtml = juliesItems.map((item, index) => (
-    <div key={`julie-${index}`}>
-      <p>{item.title}</p>
-      <p>{item.price}</p>
-      <p>{item.link}</p>
+  const priceSorter = (a, b) => b.price - a.price
+  const juliesListHtml = juliesItems.sort(priceSorter).map((item, index) => (
+    <div className="list-item" key={`julie-${index}`}>
+      <div className="list-item__title">{item.name}</div>
+      <div>{item.price}</div>
+      <div>{item.link}</div>
     </div>
   ))
 
-  const drewsListHtml = drewsItems.map((item, index) => (
-    <div key={`drew-${index}`}>
-      <p>{item.title}</p>
-      <p>{item.price}</p>
-      <p>{item.link}</p>
+  const drewsListHtml = drewsItems.sort(priceSorter).map((item, index) => (
+    <div className="list-item" key={`drew-${index}`}>
+      <div className="list-item__title">{item.name}</div>
+      <div>${item.price}</div>
+      <div>
+        <a href={item.link}>{item.link}</a>
+      </div>
     </div>
   ))
   return (
-    <div className="christmas-list">
-      <h2>Julie's List</h2>
-      {juliesListHtml}
-      <h2>Drew's List</h2>
-      {drewsListHtml}
+    <div className="christmas-list-page">
+      <img className="christmas-list-image" src={christmasImageSrc} />
+      <div className="christmas-lists">
+        <h1>Christmas List</h1>
+        <div className="lists-container">
+          <div className="list">
+            <h2>Julie's List</h2>
+            {juliesListHtml}
+          </div>
+          <div className="list">
+            <h2>Drew's List</h2>
+            {drewsListHtml}
+          </div>
+        </div>
+      </div>
     </div>
   )
 }
@@ -47,6 +59,10 @@ export const pageQuery = graphql`
           }
         }
       }
+    }
+    christmasImage: file(relativePath: { eq: "gift.svg" }) {
+      absolutePath
+      publicURL
     }
   }
 `
