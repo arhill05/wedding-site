@@ -71,12 +71,18 @@ export default PhotosPage
 
 export const pageQuery = graphql`
   query {
-    allFile(filter: { sourceInstanceName: { eq: "photos" } }) {
+    allFile(
+      filter: {
+        relativePath: { glob: "!*svg" }
+        sourceInstanceName: { eq: "photos" }
+      }
+    ) {
       edges {
         node {
+          absolutePath
           childImageSharp {
             fluid(maxHeight: 500) {
-              ...GatsbyImageSharpFluid
+              src
             }
           }
         }
