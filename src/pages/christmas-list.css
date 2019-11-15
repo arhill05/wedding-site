@@ -1,3 +1,14 @@
+@font-face {
+  font-family: 'Jenna Sue';
+  src: url('../fonts/JennaSue.woff2') format('woff2'),
+    url('../fonts/JennaSue.woff') format('woff'),
+    url('../fonts/JennaSue.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+
 :root {
   --pink: #d69e9c;
   --white: #fff;
@@ -18,7 +29,6 @@
   font-size: 16px;
   padding: 32px;
   overflow-y: scroll;
-  font-family: 'Jenna Sue', serif;
 }
 
 .christmas-list-page a {
@@ -49,6 +59,7 @@
 .christmas-list-page h3,
 .christmas-list-page h4 {
   color: var(--pink);
+  font-family: 'Jenna Sue', serif;
 }
 
 .list-item {
