@@ -21,6 +21,7 @@ const IndexPage = () => {
               <Link to="/our-story">Our Story</Link>
               {/* <Link to="/wedding-party">The Wedding Party</Link> */}
               <Link to="/photos">Photos</Link>
+              <Link to="/christmas-list">Christmas List</Link>
             </div>
           </div>
         </div>
