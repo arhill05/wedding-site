@@ -13,8 +13,10 @@ const ChristmasList = props => {
   const juliesListHtml = juliesItems.sort(priceSorter).map((item, index) => (
     <div className="list-item" key={`julie-${index}`}>
       <div className="list-item__title">{item.name}</div>
-      <div>{item.price}</div>
-      <div>{item.link}</div>
+      <div>${item.price}</div>
+      <div>
+        <a href={item.link}>{item.link}</a>
+      </div>
     </div>
   ))
 
