@@ -12,10 +12,13 @@ collections:
   - name: "Christmas List"
     label: "Christmas List Item"
     folder: "content/christmas-list"
+    identifier_field: "name"
     create: true
-    identifier_field: 'name'
+    summary: "{{person}} - {{name}}"
+    editor:
+      preview: false
     fields:
       - { name: "name", label: "Name" }
       - { name: "price", label: "Price", widget: "number" }
-      - { name: "link", label: "Link" }
+      - { name: "link", label: "Link", required: false }
       - { name: "person", widget: "select", options: ["Drew", "Julie"] }
