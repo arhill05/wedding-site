@@ -8,12 +8,15 @@ const ChristmasList = props => {
   )
   const juliesItems = items.filter(x => x.person.toLowerCase() === 'julie')
   const drewsItems = items.filter(x => x.person.toLowerCase() === 'drew')
-
   const priceSorter = (a, b) => b.price - a.price
   const juliesListHtml = juliesItems.sort(priceSorter).map((item, index) => (
     <div className="list-item" key={`julie-${item.name}`}>
       <div className="list-item__title">
-        <a href={item.link}>{item.name}</a> - ${item.price}
+        {
+          item.link ?
+            <><a href={item.link}>{item.name}</a> - ${item.price}</> :
+            <>{item.name} - ${item.price}</>
+        }
       </div>
     </div>
   ))
@@ -21,7 +24,11 @@ const ChristmasList = props => {
   const drewsListHtml = drewsItems.sort(priceSorter).map((item, index) => (
     <div className="list-item" key={`drew-${item.name}`}>
       <div className="list-item__title">
-        <a href={item.link}>{item.name}</a> - ${item.price}
+        {
+          item.link ?
+            <><a href={item.link}>{item.name}</a> - ${item.price}</> :
+            <>{item.name} - ${item.price}</>
+        }
       </div>
     </div>
   ))
@@ -46,23 +53,23 @@ const ChristmasList = props => {
 }
 export const pageQuery = graphql`
   query ChristmasList {
-    allMarkdownRemark(limit: 1000) {
-      edges {
-        node {
-          frontmatter {
-            name
-            price
-            link
-            person
-          }
-        }
-      }
-    }
-    christmasImage: file(relativePath: { eq: "gift.svg" }) {
-      absolutePath
-      publicURL
+        allMarkdownRemark(limit: 1000) {
+        edges {
+      node {
+        frontmatter {
+      name
+      price
+      link
+      person
     }
   }
-`
+}
+}
+    christmasImage: file(relativePath: {eq: "gift.svg" }) {
+        absolutePath
+      publicURL
+      }
+    }
+  `
 
 export default ChristmasList
