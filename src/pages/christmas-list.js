@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { graphql } from 'gatsby'
 import './christmas-list.css'
 const ChristmasList = props => {
@@ -11,7 +11,7 @@ const ChristmasList = props => {
 
   const priceSorter = (a, b) => b.price - a.price
   const juliesListHtml = juliesItems.sort(priceSorter).map((item, index) => (
-    <div className="list-item" key={`julie-${index}`}>
+    <div className="list-item" key={`julie-${item.name}`}>
       <div className="list-item__title">
         <a href={item.link}>{item.name}</a> - ${item.price}
       </div>
@@ -19,7 +19,7 @@ const ChristmasList = props => {
   ))
 
   const drewsListHtml = drewsItems.sort(priceSorter).map((item, index) => (
-    <div className="list-item" key={`drew-${index}`}>
+    <div className="list-item" key={`drew-${item.name}`}>
       <div className="list-item__title">
         <a href={item.link}>{item.name}</a> - ${item.price}
       </div>
@@ -27,7 +27,7 @@ const ChristmasList = props => {
   ))
   return (
     <div className="christmas-list-page">
-      <img className="christmas-list-image" src={christmasImageSrc} />
+      <img className="christmas-list-image" alt="" src={christmasImageSrc} />
       <div className="christmas-lists">
         <h1>Christmas List</h1>
         <div className="lists-container">
