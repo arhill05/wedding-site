@@ -76,6 +76,10 @@
   color: var(--brown);
 }
 
+.list-item__is-new {
+  color: var(--pink);
+}
+
 .christmas-list-page h1 {
   font-size: 4em;
 }

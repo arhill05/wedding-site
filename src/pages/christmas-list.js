@@ -1,6 +1,8 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import './christmas-list.css'
+import ChristmasListItem from '../components/christmasListItem'
+
 const ChristmasList = props => {
   const christmasImageSrc = props.data.christmasImage.publicURL
   const items = props.data.allMarkdownRemark.edges.map(
@@ -9,29 +11,23 @@ const ChristmasList = props => {
   const juliesItems = items.filter(x => x.person.toLowerCase() === 'julie')
   const drewsItems = items.filter(x => x.person.toLowerCase() === 'drew')
   const priceSorter = (a, b) => b.price - a.price
-  const juliesListHtml = juliesItems.sort(priceSorter).map((item, index) => (
-    <div className="list-item" key={`julie-${item.name}`}>
-      <div className="list-item__title">
-        {
-          item.link ?
-            <><a href={item.link}>{item.name}</a> - ${item.price}</> :
-            <>{item.name} - ${item.price}</>
-        }
-      </div>
-    </div>
-  ))
+  const juliesListHtml = juliesItems
+    .sort(priceSorter)
+    .map((item, index) => (
+      <ChristmasListItem
+        key={`${item.person}-${item.name.split(' ').join('')}`}
+        item={item}
+      />
+    ))
 
-  const drewsListHtml = drewsItems.sort(priceSorter).map((item, index) => (
-    <div className="list-item" key={`drew-${item.name}`}>
-      <div className="list-item__title">
-        {
-          item.link ?
-            <><a href={item.link}>{item.name}</a> - ${item.price}</> :
-            <>{item.name} - ${item.price}</>
-        }
-      </div>
-    </div>
-  ))
+  const drewsListHtml = drewsItems
+    .sort(priceSorter)
+    .map((item, index) => (
+      <ChristmasListItem
+        key={`${item.person}-${item.name.split(' ').join('')}`}
+        item={item}
+      />
+    ))
   return (
     <div className="christmas-list-page">
       <img className="christmas-list-image" alt="" src={christmasImageSrc} />
@@ -53,23 +49,23 @@ const ChristmasList = props => {
 }
 export const pageQuery = graphql`
   query ChristmasList {
-        allMarkdownRemark(limit: 1000) {
-        edges {
-      node {
-        frontmatter {
-      name
-      price
-      link
-      person
-    }
-  }
-}
-}
-    christmasImage: file(relativePath: {eq: "gift.svg" }) {
-        absolutePath
-      publicURL
+    allMarkdownRemark(limit: 1000) {
+      edges {
+        node {
+          frontmatter {
+            name
+            price
+            link
+            person
+          }
+        }
       }
     }
-  `
+    christmasImage: file(relativePath: { eq: "gift.svg" }) {
+      absolutePath
+      publicURL
+    }
+  }
+`
 
 export default ChristmasList
