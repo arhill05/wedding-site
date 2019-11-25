@@ -10,7 +10,15 @@ const ChristmasList = props => {
   )
   const juliesItems = items.filter(x => x.person.toLowerCase() === 'julie')
   const drewsItems = items.filter(x => x.person.toLowerCase() === 'drew')
-  const priceSorter = (a, b) => b.price - a.price
+  const priceSorter = (a, b) => {
+    if (priceB > priceA) {
+      return 1
+    } else if (priceB < priceA) {
+      return -1
+    } else {
+      return 0
+    }
+  }
   const juliesListHtml = juliesItems
     .sort(priceSorter)
     .map((item, index) => (

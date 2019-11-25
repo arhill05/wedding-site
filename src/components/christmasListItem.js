@@ -7,7 +7,7 @@ class ChristmasListItem extends Component {
       item: props.item,
       listItemClass: 'list-item',
       keyString: `${props.item.person}-${props.item.name.split(' ').join('')}`,
-      isNew: false
+      isNew: false,
     }
   }
 
@@ -24,17 +24,18 @@ class ChristmasListItem extends Component {
   }
 
   render() {
+    const formattedPrice = Number(this.state.item.price).toFixed(2)
     return (
       <div className={this.state.listItemClass} id={this.state.keyString}>
         <div className="list-item__title">
           {this.state.item.link ? (
             <>
               <a href={this.state.item.link}>{this.state.item.name}</a> - $
-              {this.state.item.price}
+              {formattedPrice}
             </>
           ) : (
             <>
-              {this.state.item.name} - ${this.state.item.price}
+              {this.state.item.name} - ${formattedPrice}
             </>
           )}
         </div>
