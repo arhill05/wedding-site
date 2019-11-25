@@ -11,6 +11,8 @@ const ChristmasList = props => {
   const juliesItems = items.filter(x => x.person.toLowerCase() === 'julie')
   const drewsItems = items.filter(x => x.person.toLowerCase() === 'drew')
   const priceSorter = (a, b) => {
+    const priceA = Number(a.price);
+    const priceB = Number(b.price);
     if (priceB > priceA) {
       return 1
     } else if (priceB < priceA) {
